@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce landing page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;300;400;500;600;700;800;900&display=swap');
+        </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <img class='menu-btn hamburger' src="images/icon-menu.svg" alt="hamburger menu icon">
+            <img class="logo" src="images/logo.svg" alt="logo">
+        </div>
+        <div class="nav-right">
+           <div class="cart-area">
+            <img class="cart" src="images/icon-cart.svg" alt="cart">
+            <div class="count-icon"></div>
+           </div>
+            <img class="avatar" src="images/image-avatar.png" alt="avatar">
+        </div>
+        <div class="nav-list">
+            <img class="menu-btn" src="images/icon-close.svg" alt="closing menu icon">
+            <ul>
+                <li><a href="#">collections</a></li>
+                <li><a href="#">men</a></li>
+                <li><a href="#">women</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <main>
+        <!-- Checkout Container-->
+        <div class="checkout-container">
+            <h2>cart</h2>
+            <hr>
+            <div class="checkout-summary">
+                <img src="images/image-product-1-thumbnail.jpg" alt=" shoe thumbnail" class="checkout-img">
+                <div class="checkout-text">
+                    <p class="product-name">Fall Limited Edition</p>
+                    <div class="product-pricing">
+                        <div class="unit-price">$125</div>
+                        <img src="images/icon-close.svg" alt="" class="mult-icon">
+                        <div class="item-number">cart is empty</div>
+                        <div class="total-price"></div>
+                    </div>
+                </div>  
+                <img src="images/icon-delete.svg" alt="" class="delete-img">
+            </div>
+            <!-- checkout button-->
+            <button class="checkout-cta">
+                Checkout
+            </button>
+        </div>
+
+        <!-- Empty Checkout container -->
+        <div class="empty-checkout">
+            <h2>cart</h2>
+            <hr>
+             <h3>Your cart is empty.</h3>
+        </div>
+
+        <!-- Slides-->
+        <div class="slider">
+            <div class="icons">
+                <img class="prev-icon" src="images/icon-previous.svg" alt="previous icon">
+                <img class="next-icon" src="images/icon-next.svg" alt="next icon">
+            </div>
+            <div class="slides">
+                <div class="slide">
+                    <img class='slide-img' src="images/image-product-1.jpg" alt="first image of shoes">
+                </div>
+            </div>
+
+            <div class="thumbnails">
+                <div>
+                  <img class='thumb-img thumb-img1' data-id="thumb1" src="images/image-product-1-thumbnail.jpg">  
+                </div> 
+                <div class="thumbnail thumbnail-2">
+                  <img class='thumb-img thumb-img2' data-id="thumb2" src=" images/image-product-2-thumbnail.jpg">  
+                </div> 
+                <div class="thumbnail thumbnail-3">
+                  <img class='thumb-img thumb-img3' data-id="thumb3" src=" images/image-product-3-thumbnail.jpg">  
+                </div> 
+                <div class="thumbnail thumbnail-4">
+                  <img class='thumb-img thumb-img4' data-id="thumb4" src="images/image-product-4-thumbnail.jpg">  
+                </div>
+            </div>
+        </div>
+
+      <div class="info">
+        <div class="about-item">
+            <h3>Sneaker Company</h3>
+            <h2>Fall Limited Edition Sneakers </h2>
+            <p>These low-profile sneakers are your perfect casual wear companion. 
+                Featuring a durable rubber outer sole, they’ll withstand everything 
+                the weather can offer. 
+            </p>
+        </div>
+
+        <div class="item-costs">
+             <div class="item-cost">
+                <div class="price">
+                    <h2>$125.00</h2>
+                </div>
+                <div class="percent-discount">
+                    50%
+                </div>
+             </div>
+              <div class="price-discount">
+               <h3> $250.00</h3>
+              </div>
+        </div>
+
+        <div class="cart-section">
+            <div class="adjust-amount">
+                <img class='reduce' src="images/icon-minus.svg" alt="minus icon">
+                <h3 class="count" >0</h3>
+                <img class="add" src="images/icon-plus.svg" alt="plus icon">
+            </div>
+            <div class="cta">
+                <img src="images/icon-cart.svg" alt="cart icon">
+                <h3>Add to cart</h3>
+            </div>
+        </div>
+      </div>
+
+    </main>
+
+    <script src="main.js" ></script>
+</body>
+</html>

@@ -1,0 +1,684 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    width: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/*************** Beginning of nav bar***************/
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+}
+
+.nav-left,
+.nav-right {
+    margin: 1.5rem;
+}
+
+.logo {
+    width: 7rem;
+    height: 1.3rem;
+}
+
+.hamburger {
+    width: 1.3rem;
+    margin-right: .8rem;
+    height: 1rem;
+}
+
+.nav-list {
+    height: 100vh;
+    width: 70vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    transition: all 500ms linear;
+    display: none;
+}
+
+.show {
+          display: block;
+}
+
+.nav-list img {
+   width: 1.5rem;
+   margin-left: 2.5rem;
+   margin-top: 2rem;
+}
+
+.nav-list ul {
+      list-style: none;
+      text-transform: capitalize;
+      margin-top: 3rem;
+}
+
+.nav-list ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    line-height: 3rem;
+    cursor: pointer;
+}
+
+.nav-list ul a:hover {
+    color: hsl(26, 100%, 55%);
+    margin-left: 1rem;
+    transition: all 300ms linear;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-area {
+    position: relative;
+}
+ 
+.cart {
+    margin-right: 1.5rem;
+    height: 1.6rem;
+    cursor: pointer;
+}
+
+.count-icon {
+    background-color: hsl(25, 90%, 55%);
+    color: white;
+    position: absolute;
+    z-index: 1;
+    bottom: 75%;
+    left: .5rem;
+    font-size: .6rem;
+    width: 1.3rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.avatar {
+    width: 1.6rem;
+}
+
+.line {
+    display: none;
+}
+
+/******************* End of nav bar *****************/
+
+
+/********************** Start of slider section **********************/
+.slider {
+     position: relative;
+}
+
+.icons {
+     display: flex;
+     position: absolute;
+     width: 90%;
+     height: 100%;
+     align-items: center;
+     justify-content: space-between;
+    margin-left: 5%;
+}
+
+.icons img {
+    background-color: white;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    padding: .8rem;
+}
+
+.slides {
+   display: flex;
+   overflow: hidden;
+}  
+
+.slide-img {
+    width: 100vw;
+    height: 45vh;
+    display: block;
+    transition: all 500ms ease;
+}
+
+.thumbnails {
+    display: none;
+}
+
+/*********************** End of slider section *****************************/
+
+
+/*********************** Start of product-info section ***********************/
+
+.about-item {
+    padding: 0 1rem;
+}
+
+.about-item h3 {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: .8rem;
+    margin-top: 1.8rem;
+}
+
+.about-item h2 {
+    margin-top: 1.5rem;
+}
+
+.about-item p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    color:hsl(220, 14%, 75%);
+    margin-top: 1rem;
+}
+
+/**************** End of product-info section ***************/
+
+
+/*********** Start of 'item costs' section *********/
+.item-costs {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.item-cost {
+    display: flex;
+}
+
+.percent-discount {
+    align-self: center;
+    margin-left: 1rem;
+    border-radius: 5px;
+    padding: .2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: hsl(25, 100%, 94%);
+    font-weight: 700;
+    color: hsl(26, 100%, 55%);
+}
+
+.price-discount {
+    text-decoration: line-through;
+    color: hsl(220, 13%, 13%);
+    animation: bounce 2s ease-in-out infinite ;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+        color: hsl(26, 100%, 55%);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*************** End of 'item costs' section **********************/
+
+
+/*********************** Beginning of 'cart' section ************************/
+.cart-section {
+    padding: 1rem;
+    padding-top: 0;
+    margin-bottom: 3rem;
+}
+
+.adjust-amount {
+    display: flex;
+    padding: 0 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    background-color: hsl(223, 64%, 98%);
+}
+
+.adjust-amount img {
+    width: 1.1rem;
+    cursor: pointer;
+}
+
+.cart-section h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    margin-top: 1.5rem;
+    color: white;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 15px;
+    padding: .2rem 0;
+}
+
+.cta:hover {
+    transform: scale(1.08);
+    transition: all 300ms linear;
+}
+
+.cta img {
+    margin-right: 1.2rem;
+    width: 1.2rem;
+    color: white;
+}
+
+.cta h3 {
+    font-size: 1.1rem;
+}
+/* End of 'cart' section*/
+
+/*
+==========================
+checkout container
+==========================
+*/
+
+.checkout-container {
+    width: 90vw;
+    margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px;
+    position: absolute;
+    z-index: 1;
+    top: 5rem;
+    background: white;
+    display: none;
+}
+
+.show-checkout {
+    display: block;
+}
+
+.checkout-container h2 {
+    font-size: 1rem;
+    background-color: white;
+    margin-bottom: .8rem;
+    padding: .3rem 1rem;
+    text-transform: capitalize;
+}
+.checkout-summary {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: .8rem 1rem 0;
+}
+
+.checkout-img {
+    width: 20%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.checkout-text {
+  background: white;
+}
+
+.product-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.checkout-text p {
+    letter-spacing: 1px;
+    background: white;
+
+}
+
+.unit-price,
+.mult-icon,
+.item-number {
+    font-weight: 400;
+    color: black;
+    letter-spacing: 1px;
+    background-color: white;
+}
+
+.mult-icon {
+    width: 6%;
+}
+
+.total-price {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    background: white;
+} 
+
+.delete-img {
+    width: 7%;
+    height: 15%;
+    align-self: center;
+    background: white;
+}
+
+.checkout-cta {
+    width: 90%;
+    font-size: 1rem;
+    font-weight: 700;
+    background: hsl(25, 90%, 55%);
+    border-radius: 10px;
+    padding: 1.3rem 0;
+    margin: 1.5rem;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    margin-left: 5%;
+}
+
+/*
+=========================
+Empty checkout container
+=========================
+*/
+.empty-checkout {
+    width: 90vw;
+    margin-left: 5%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px hsla(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1;
+    top: 5rem;
+    background: white;
+    height: 28%;
+    display: none;
+}
+
+.show-emptycheckout {
+    display: block;
+}
+
+.empty-checkout h2 {
+    font-size: 1rem;
+    background-color: white;
+    margin-bottom: .8rem;
+    padding: .3rem 1rem;
+    text-transform: capitalize;
+}
+
+.empty-checkout h3 {
+     text-align: center;
+    color: hsl(220, 13%, 13%);
+    margin-top: 25%;
+}
+
+/****** media querries for very small screens *****/
+@media screen and (max-width: 330px) {
+    .logo {
+        width: 5rem;
+        height: 1.2rem;
+    }
+
+    .cart  {
+        height: 1.5rem;
+        margin-right: .7rem;
+    }
+
+    .cta img {
+        margin-right: 2rem;
+    }
+
+}
+
+
+/***** media querries for TABLET screens *****/
+@media screen and (min-width: 550px) {
+    body {
+        font-size: 20px;
+    }
+
+    .slides img {
+        height: auto;
+    }
+
+    .icons img {
+        width: 1rem;
+        height: 1rem;
+    }
+    
+    .previous-icon{
+        margin-left: 1rem;
+      }
+      
+      .next-icon {
+          margin-right: 1rem;
+      }
+
+      .checkout-container {
+        max-width: 80vw;
+        margin-left: 10%;
+      }
+    
+      .checkout-summary {
+          font-size: 1.6rem;
+      }
+}
+
+
+/*
+==========================================
+ Media querries for DESKTOP screens 
+==========================================
+*/
+@media screen and (min-width: 980px) {
+    body {
+        font-size: 24px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+    
+    nav {
+        padding: 0 7rem;
+        position: fixed;
+        width: 80%;
+        margin: 0;
+        align-self: center;
+        top: 20px;
+    }
+
+    .nav-left,
+    .nav-right {
+    margin: 0;
+}
+
+    nav::after {
+        content: '';
+        background-color: hsl(220, 13%, 13%);
+        z-index: 1;
+        height: 1px;
+        width: 80%;
+        position: fixed;
+        top: 6rem;
+
+    }
+
+    .nav-left {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .logo {
+        font-size: 10rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-list {
+        display: block;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        margin-left: 15rem;
+        padding: 0;
+    }
+
+    .nav-list ul {
+        display: flex;
+        margin-top: 3px;
+    }
+    
+    .nav-list ul a {
+        font-size: 1rem;
+    }
+
+    .nav-list img {
+        display: none;
+    }
+
+    .nav-list ul li:not(:last-child) {
+         margin-right: 2rem;
+    }
+    
+    .cart {
+        align-self: center;
+    }
+    
+    .avatar {
+        width: 3rem;
+    }
+     
+     main {
+         display: flex;
+         position: relative;
+         max-width: 1100px;
+         min-width: 900px;
+         top: 8rem;
+         align-self: center;
+     }
+    
+    .slider {
+        width: 50%;
+    }
+     .slides {
+         width: 100%;
+     }
+    .slide {
+        width: 75%;
+        margin-left: 4rem;
+    }
+
+    .slide img {
+        width: 95%;
+        height: 94%;
+        border-radius: 15px;
+    }
+     
+    .thumbnails {
+        width: 75%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 4rem;
+        cursor: pointer;
+    }
+
+    .thumb-img {
+        width: 85%;
+        border-radius: 15px;
+        display: block;
+    }
+
+    /*** Class for a checked thumbnail image***/
+    .checked-thumbimg {
+         opacity: .5;
+         border: 3px solid hsl(26, 100%, 55%);
+         width: 78%;
+    }
+
+    .thumbnail:not(:last-child) {
+        margin-right: 10px;
+    }
+     .icons {
+       display: none;
+     }
+
+     .info {
+        width: 50%;
+     }
+
+     .item-costs {
+         height: 50px;
+         align-items: center;
+     }
+
+     .about-item p {
+         font-size: 1.2rem;
+         line-height: 2rem;
+     }
+
+    .cart-section {
+        width: 95%;
+        display: grid;
+        grid-template-columns: 1fr 2fr ;
+    }
+
+    .adjust-amount {
+        height: 5rem;
+        align-self: center;
+        margin: 1.5rem 1rem 0 0;
+    }
+
+    .checkout-container {
+        max-width: 300px;
+        left: 60%;
+        top: -10%;
+        box-shadow: 0px 0px 3px 0px;
+    }
+
+    .checkout-container:hover {
+        box-shadow: 0px 0px 1px 0px;
+        transition: all 300ms linear;
+    }
+
+    .checkout-summary {
+        font-size: .8rem;
+    }
+
+    .checkout-cta {
+        font-size: .8rem;
+        padding: 1rem;
+    }
+
+    .delete-img {
+        cursor: pointer;
+    }
+
+    .empty-checkout {
+        max-width: 300px;
+        height: 230px;
+        left: 65%;
+        top: -10%;
+        box-shadow: 0px 0px 3px 0px;
+        /*display: none;*/
+    }
+      
+    .empty-checkout h3 {
+        margin-top: 3rem;
+        font-size: 1rem;
+    }
+}
+
